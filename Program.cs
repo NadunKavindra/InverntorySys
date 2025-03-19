@@ -1,3 +1,5 @@
+using InverntorySys.Data;
+
 namespace InverntorySys
 {
     public class Program
@@ -5,9 +7,14 @@ namespace InverntorySys
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddSingleton<ItemService>(); // Register JSON file-based data service
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddSession(); // Add session support
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // Allow access in _Layout.cshtml
+
 
             var app = builder.Build();
 
@@ -23,7 +30,7 @@ namespace InverntorySys
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession(); // Enable session middleware
             app.UseAuthorization();
 
             app.MapRazorPages();

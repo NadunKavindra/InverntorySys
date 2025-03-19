@@ -1,0 +1,47 @@
+﻿@page
+@model InverntorySys.Pages.CreateItemModel
+@{
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <h3>Enter Stock Item Details</h3>
+            <form method="post">
+                <div class="form-group">
+                    <label class="control-label">Item:</label>
+                    <input class="form-control" asp-for="items.Item" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">RackNo:</label>
+                    <input class="form-control" asp-for="items.RackNo" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">ShelfNo:</label>
+                    <input class="form-control" asp-for="items.ShelfNo" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">BinNo:</label>
+                    <input class="form-control" asp-for="items.BinNo" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">PartNo:</label>
+                    <input class="form-control" asp-for="items.PartNo" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Quantity:</label>
+                    <input class="form-control" asp-for="items.Quantity" required />
+                </div>
+                <div class ="form-group">
+                    <label class="control-label">Make:</label>
+                    <input class="form-control" asp-for="items.Make" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description:</label>
+                    <textarea class="form-control" asp-for="items.Description"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+[
+  {
+    "ItemId": 1,
+    "Item": "Screwdriver Set",
+    "RackNo": "R1",
+    "ShelfNo": "S1",
+    "BinNo": "B1",
+    "PartNo": "P001",
+    "Make": "Bosch",
+    "Quantity": 10,
+    "Description": "Precision screwdriver set with multiple heads",
+    "History": "Restocked on 2025-03-10"
+  },
+  {
+    "ItemId": 2,
+    "Item": "Wrench Set",
+    "RackNo": "R2",
+    "ShelfNo": "S3",
+    "BinNo": "B5",
+    "PartNo": "P002",
+    "Make": "Stanley",
+    "Quantity": 11,
+    "Description": "Adjustable wrench set for heavy-duty work",
+    "History": "Last issued by guest on 2025-03-19"
+  },
+  {
+    "ItemId": 3,
+    "Item": "hgfhgfh",
+    "RackNo": "234",
+    "ShelfNo": "543",
+    "BinNo": "34534",
+    "PartNo": "435",
+    "Make": "ertret",
+    "Quantity": 13,
+    "Description": "32435",
+    "History": "Last issued by guest on 2025-03-19"
+  },
+  {
+    "ItemId": 4,
+    "Item": "TestItem",
+    "RackNo": "234",
+    "ShelfNo": "543",
+    "BinNo": "34534",
+    "PartNo": "435",
+    "Make": "ertret",
+    "Quantity": 2,
+    "Description": "rtyt",
+    "History": "Last issued by guest on 2025-03-19"
+  },
+  {
+    "ItemId": 5,
+    "Item": "TestItem Two",
+    "RackNo": "235",
+    "ShelfNo": "544",
+    "BinNo": "34535",
+    "PartNo": "433",
+    "Make": "mark one",
+    "Quantity": 4,
+    "Description": "Test data",
+    "History": "Restocked by guest on 2025-03-19"
+  },
+  {
+    "ItemId": 6,
+    "Item": "TestItem Three",
+    "RackNo": "237",
+    "ShelfNo": "544",
+    "BinNo": "34535",
+    "PartNo": "4353",
+    "Make": "mark three",
+    "Quantity": 12,
+    "Description": "Test",
+    "History": "Restocked by guest on 2025-03-19"
+  }
+]

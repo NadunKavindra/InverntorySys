@@ -20,3 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.small-alert {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.small-alert p {
+    margin: 2px 0;
+}
+
+.small-input {
+    width: 60px;
+    text-align: center;
+    padding: 2px;
+}

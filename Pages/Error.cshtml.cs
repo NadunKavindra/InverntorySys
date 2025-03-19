@@ -19,9 +19,10 @@ namespace InverntorySys.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            HttpContext.Session.Clear(); // Remove session
+            return RedirectToPage("Index"); // Redirect to login page
         }
     }
 

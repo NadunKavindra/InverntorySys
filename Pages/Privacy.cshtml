@@ -1,8 +1,80 @@
 ﻿@page
-@model PrivacyModel
+@model CreateModel
 @{
-    ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+<h2>Search Stock Items</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success small-alert">
+        <p>@TempData["SuccessMessage"]</p>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger small-alert">
+        <p>@TempData["ErrorMessage"]</p>
+    </div>
+}
+
+
+<form method="get">
+    <input type="text" asp-for="SearchQuery" placeholder="Search by..." />
+    <button type="submit">Search</button>
+</form>
+
+<table class="table table-striped table-sm small">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>RackNo</th>
+            <th>ShelfNo</th>
+            <th>BinNo</th>
+            <th>PartNo</th>
+            <th>Make</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>History</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.items)
+        {
+            <tr>
+                <td>@item.Item</td>
+                <td>@item.RackNo</td>
+                <td>@item.ShelfNo</td>
+                <td>@item.BinNo</td>
+                <td>@item.PartNo</td>
+                <td>@item.Make</td>
+                <td>
+                    @if (item.Quantity == 0)
+                    {
+                        <span class="text-danger font-weight-bold">Out of Stock</span>
+                    }
+                    else
+                    {
+                        @item.Quantity
+                    }
+                </td>
+                <td>@item.Description</td>
+                <td>@item.History</td>
+                <td>
+                    <form method="post" asp-page-handler="Delete" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.ItemId" />
+                        <input type="number" name="quantity" id="quantity_@item.ItemId" value="@item.Quantity" min="0" class="small-input" required />
+                        <button type="submit" class="btn btn-sm btn-success" style="padding: 2px 5px; font-size: 11px;">
+                            Update
+                        </button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody> 
+    
+</table>
+
